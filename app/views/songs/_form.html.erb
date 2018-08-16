@@ -1,0 +1,13 @@
+<%= render "shared/error_messages", song: @song %>
+
+<%= form_for song do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.label :duration %>
+  <%= form.number_field :duration %>
+  <br>
+  <%= form.select :artist_id, artists %>
+  <br>
+  <%= form.submit "Save", class: "btn btn-primary" %>
+<% end %>
